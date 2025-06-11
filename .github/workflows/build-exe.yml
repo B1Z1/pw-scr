@@ -23,6 +23,12 @@ jobs:
       - name: Build EXE for crc
         run: pyinstaller --onefile crc.py
 
+      - name: Build EXE for converter_from_internal
+        run: pyinstaller --onefile converter_from_internal.py
+
+      - name: Build EXE for converter_to_internal
+        run: pyinstaller --onefile converter_to_internal.py
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:

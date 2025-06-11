@@ -1,4 +1,5 @@
 import time
+import sys
 
 def calculate_crc16_modbus(data_bytes):
     # Początkowa wartość rejestru CRC
@@ -72,6 +73,9 @@ def main():
 
     print(f"\nWyliczona CRC (hex): {final_crc:04X}")
     print(f"Łączny czas realizacji {n_repetitions} powtórzeń: {total_time_ms:.3f} ms")
+
+    input("Naciśnij Enter, aby zamknąć program...")
+    sys.exit()
 
 if __name__ == "__main__":
     main()
